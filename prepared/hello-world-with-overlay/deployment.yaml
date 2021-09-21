@@ -14,7 +14,7 @@ spec:
         app: hello-world-overlay
     spec:
       containers:
-        - name: hhello-world-overlay
+        - name: hello-world-overlay
           image: bashofmann/rancher-demo:1.0.0
           imagePullPolicy: Always
           ports:
