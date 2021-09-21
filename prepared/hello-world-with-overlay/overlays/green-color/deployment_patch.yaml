@@ -2,7 +2,7 @@ spec:
   template:
     spec:
       containers:
-        - name: hello-world
+        - name: hello-world-overlay
           env:
             - name: COW_COLOR
               value: green

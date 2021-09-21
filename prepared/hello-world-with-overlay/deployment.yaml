@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world
+  name: hello-world-overlay
   namespace: default
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: hello-world
+      app: hello-world-overlay
   template:
     metadata:
       labels:
-        app: hello-world
+        app: hello-world-overlay
     spec:
       containers:
-        - name: hello-world
+        - name: hhello-world-overlay
           image: bashofmann/rancher-demo:1.0.0
           imagePullPolicy: Always
           ports:
