@@ -31,4 +31,11 @@ targetCustomizations:
               hosts:
                 - prometheus.10.65.0.107.sslip.io
   clusterName: bhofmann-test
-
+- name: edge-clusters
+  helm:
+    values:
+      grafana:
+        enabled: false
+  clusterSelector:
+    matchLabels:
+      role: edge
