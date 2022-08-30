@@ -1,1 +1,4 @@
 defaultNamespace: cattle-monitoring-system
+
+dependsOn:
+  - name: bhofmann-test-prepared-all-monitoring
