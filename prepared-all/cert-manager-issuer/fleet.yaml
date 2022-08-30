@@ -1,0 +1,2 @@
+dependsOn:
+  - name: bhofmann-test-prepared-all-cert-manager
