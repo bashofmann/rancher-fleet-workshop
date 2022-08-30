@@ -1,0 +1,7 @@
+defaultNamespace: cert-manager
+
+helm:
+  releaseName: cert-manager
+  repo: //charts.jetstack.io
+  chart: cert-manager
+  version: 1.7.1
