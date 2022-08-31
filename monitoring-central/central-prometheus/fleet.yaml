@@ -1,0 +1,4 @@
+defaultNamespace: central-monitoring-system
+
+dependsOn:
+  - name: monitoring-all-monitoring-all-monitoring

@@ -1,0 +1,2 @@
+dependsOn:
+  - name: monitoring-all-monitoring-all-cert-manager
