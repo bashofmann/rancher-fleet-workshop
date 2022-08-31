@@ -28,7 +28,7 @@ stringData:
         password: bar
       static_configs:
         - targets: 
-          - "prometheus.local.18.185.98.174.sslip.io:443"
-          - "prometheus.fleet01.3.65.18.189.sslip.io:443"
-          - "prometheus.fleet02.3.67.220.213.sslip.io:443"
-          - "prometheus.fleet03.3.75.100.197.sslip.io:443"
+          - "prometheus.central.<IP>.sslip.io:443"
+          - "prometheus.fleet01.<IP>.sslip.io:443"
+          - "prometheus.fleet02.<IP>.sslip.io:443"
+          - "prometheus.fleet03.<IP>.sslip.io:443"

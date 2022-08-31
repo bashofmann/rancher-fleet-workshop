@@ -37,11 +37,11 @@ targetCustomizations:
       prometheus:
         ingress:
           hosts:
-            - prometheus.fleet01.3.65.18.189.sslip.io
+            - prometheus.fleet01.<IP>.sslip.io
           tls:
             - secretName: prometheus-ingress-tls
               hosts:
-                - prometheus.fleet01.3.65.18.189.sslip.io
+                - prometheus.fleet01.<IP>.sslip.io
   clusterName: fleet01
 - name: fleet02
   helm:
@@ -49,11 +49,11 @@ targetCustomizations:
       prometheus:
         ingress:
           hosts:
-            - prometheus.fleet02.3.67.220.213.sslip.io
+            - prometheus.fleet02.<IP>.sslip.io
           tls:
             - secretName: prometheus-ingress-tls
               hosts:
-                - prometheus.fleet02.3.67.220.213.sslip.io
+                - prometheus.fleet02.<IP>.sslip.io
   clusterName: fleet02
 - name: fleet03
   helm:
@@ -61,23 +61,23 @@ targetCustomizations:
       prometheus:
         ingress:
           hosts:
-            - prometheus.fleet03.3.75.100.197.sslip.io
+            - prometheus.fleet03.<IP>.sslip.io
           tls:
             - secretName: prometheus-ingress-tls
               hosts:
-                - prometheus.fleet03.3.75.100.197.sslip.io
+                - prometheus.fleet03.<IP>.sslip.io
   clusterName: fleet03
-- name: local
+- name: central
   helm:
     values:
       prometheus:
         ingress:
           hosts:
-            - prometheus.local.18.185.98.174.sslip.io
+            - prometheus.central.<IP>.sslip.io
           tls:
             - secretName: prometheus-ingress-tls
               hosts:
-                - prometheus.local.18.185.98.174.sslip.io
+                - prometheus.central.<IP>.sslip.io
       grafana:
         sidecar:
           dashboards:
@@ -88,7 +88,7 @@ targetCustomizations:
                 enabled: true
           datasources:
             url: http://prometheus-operated.central-monitoring-system:9090/
-  clusterName: local
+  clusterName: central
 #- name: edge-clusters
 #  helm:
 #    values:
