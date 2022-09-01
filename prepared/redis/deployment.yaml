@@ -28,6 +28,8 @@ spec:
         volumeMounts:
         - mountPath: /data
           name: redis-data
+        - mountPath: /etc/redis
+          name: redis-conf
         resources:
           limits:
             memory: 256Mi
@@ -47,4 +49,14 @@ spec:
       volumes:
       - name: redis-data
         emptyDir: {}
-
+      - name: redis-conf
+        configMap:
+          name: redis-conf
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: redis-conf
+data:
+  redis.conf: |
+    maxmemory 20mb
