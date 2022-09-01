@@ -22,4 +22,4 @@ helm:
 
     global:
       cattle:
-        url: https://rancher.<IP>.sslip.io/
+        url: https://rancher.3.70.181.89.sslip.io/

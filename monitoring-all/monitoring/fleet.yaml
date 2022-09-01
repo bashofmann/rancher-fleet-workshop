@@ -37,11 +37,11 @@ targetCustomizations:
       prometheus:
         ingress:
           hosts:
-            - prometheus.fleet01.<IP>.sslip.io
+            - prometheus.fleet01.3.70.191.233.sslip.io
           tls:
             - secretName: prometheus-ingress-tls
               hosts:
-                - prometheus.fleet01.<IP>.sslip.io
+                - prometheus.fleet01.3.70.191.233.sslip.io
   clusterName: fleet01
 - name: fleet02
   helm:
@@ -49,11 +49,11 @@ targetCustomizations:
       prometheus:
         ingress:
           hosts:
-            - prometheus.fleet02.<IP>.sslip.io
+            - prometheus.fleet02.18.197.142.118.sslip.io
           tls:
             - secretName: prometheus-ingress-tls
               hosts:
-                - prometheus.fleet02.<IP>.sslip.io
+                - prometheus.fleet02.18.197.142.118.sslip.io
   clusterName: fleet02
 - name: fleet03
   helm:
@@ -61,11 +61,11 @@ targetCustomizations:
       prometheus:
         ingress:
           hosts:
-            - prometheus.fleet03.<IP>.sslip.io
+            - prometheus.fleet03.18.156.137.178.sslip.io
           tls:
             - secretName: prometheus-ingress-tls
               hosts:
-                - prometheus.fleet03.<IP>.sslip.io
+                - prometheus.fleet03.18.156.137.178.sslip.io
   clusterName: fleet03
 - name: central
   helm:
@@ -73,11 +73,11 @@ targetCustomizations:
       prometheus:
         ingress:
           hosts:
-            - prometheus.central.<IP>.sslip.io
+            - prometheus.central.3.72.51.158.sslip.io
           tls:
             - secretName: prometheus-ingress-tls
               hosts:
-                - prometheus.central.<IP>.sslip.io
+                - prometheus.central.3.72.51.158.sslip.io
       grafana:
         sidecar:
           dashboards:
