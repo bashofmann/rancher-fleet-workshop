@@ -24,8 +24,8 @@ stringData:
       params:
         "match[]": [ '{__name__=~".+"}' ]
       basic_auth:
-        username: foo
-        password: bar
+        username: user
+        password: password
       static_configs:
         - targets: 
           - "prometheus.central.3.72.51.158.sslip.io:443"
