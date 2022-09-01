@@ -8,8 +8,6 @@ helm:
   values:
     controller:
       replicas: 1
-      apisvc:
-        type: ClusterIP
       ranchersso:
         enabled: true
 
@@ -23,3 +21,6 @@ helm:
     global:
       cattle:
         url: https://rancher.3.70.181.89.sslip.io/
+
+dependsOn:
+  - name: edge-prepared-neuvector-crd
