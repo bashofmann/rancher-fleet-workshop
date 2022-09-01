@@ -11,7 +11,7 @@ stringData:
       metric_relabel_configs:
         - source_labels:
             - instance
-          regex: prometheus\.([a-z\-]+)\.[0-9\.]+\.sslip\.ip:443
+          regex: prometheus\.([a-z\-]+)\.[0-9\.]+\.sslip\.io:443
           target_label: cluster
         - source_labels:
             - exported_instance
