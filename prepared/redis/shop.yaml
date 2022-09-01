@@ -65,13 +65,6 @@ spec:
           periodSeconds: 5
           exec:
             command: ["/bin/grpc_health_probe", "-addr=:8080"]
-        resources:
-          requests:
-            cpu: 100m
-            memory: 64Mi
-          limits:
-            cpu: 200m
-            memory: 128Mi
 ---
 apiVersion: v1
 kind: Service
@@ -146,13 +139,6 @@ spec:
             value: "1"
           # - name: JAEGER_SERVICE_ADDR
           #   value: "jaeger-collector:14268"
-          resources:
-            requests:
-              cpu: 100m
-              memory: 64Mi
-            limits:
-              cpu: 200m
-              memory: 128Mi
 ---
 apiVersion: v1
 kind: Service
@@ -218,13 +204,6 @@ spec:
           value: "1"
         - name: DISABLE_DEBUGGER
           value: "1"
-        resources:
-          requests:
-            cpu: 100m
-            memory: 220Mi
-          limits:
-            cpu: 200m
-            memory: 450Mi
 ---
 apiVersion: v1
 kind: Service
@@ -317,13 +296,6 @@ spec:
           #   value: "jaeger-collector:14268"
           # - name: CYMBAL_BRANDING
           #   value: "true"
-          resources:
-            requests:
-              cpu: 100m
-              memory: 64Mi
-            limits:
-              cpu: 200m
-              memory: 128Mi
 ---
 apiVersion: v1
 kind: Service
@@ -398,13 +370,6 @@ spec:
         livenessProbe:
           exec:
             command: ["/bin/grpc_health_probe", "-addr=:50051"]
-        resources:
-          requests:
-            cpu: 100m
-            memory: 64Mi
-          limits:
-            cpu: 200m
-            memory: 128Mi
 ---
 apiVersion: v1
 kind: Service
@@ -468,13 +433,6 @@ spec:
         livenessProbe:
           exec:
             command: ["/bin/grpc_health_probe", "-addr=:3550"]
-        resources:
-          requests:
-            cpu: 100m
-            memory: 64Mi
-          limits:
-            cpu: 200m
-            memory: 128Mi
 ---
 apiVersion: v1
 kind: Service
@@ -524,13 +482,6 @@ spec:
         env:
         - name: REDIS_ADDR
           value: "redis-cart:6379"
-        resources:
-          requests:
-            cpu: 200m
-            memory: 64Mi
-          limits:
-            cpu: 300m
-            memory: 128Mi
         readinessProbe:
           initialDelaySeconds: 15
           exec:
@@ -609,13 +560,6 @@ spec:
           value: "frontend:80"
         - name: USERS
           value: "10"
-        resources:
-          requests:
-            cpu: 300m
-            memory: 256Mi
-          limits:
-            cpu: 500m
-            memory: 512Mi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -665,13 +609,6 @@ spec:
         livenessProbe:
           exec:
             command: ["/bin/grpc_health_probe", "-addr=:7000"]
-        resources:
-          requests:
-            cpu: 100m
-            memory: 64Mi
-          limits:
-            cpu: 200m
-            memory: 128Mi
 ---
 apiVersion: v1
 kind: Service
@@ -735,13 +672,6 @@ spec:
         livenessProbe:
           exec:
             command: ["/bin/grpc_health_probe", "-addr=:50051"]
-        resources:
-          requests:
-            cpu: 100m
-            memory: 64Mi
-          limits:
-            cpu: 200m
-            memory: 128Mi
 ---
 apiVersion: v1
 kind: Service
@@ -797,13 +727,6 @@ spec:
           value: "1"
         # - name: JAEGER_SERVICE_ADDR
         #   value: "jaeger-collector:14268"
-        resources:
-          requests:
-            cpu: 200m
-            memory: 180Mi
-          limits:
-            cpu: 300m
-            memory: 300Mi
         readinessProbe:
           initialDelaySeconds: 20
           periodSeconds: 15
