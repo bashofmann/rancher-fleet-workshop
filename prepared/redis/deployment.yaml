@@ -17,6 +17,8 @@ spec:
         image: redis:alpine
         ports:
         - containerPort: 6379
+        args:
+          - /etc/redis/redis.conf
         readinessProbe:
           periodSeconds: 5
           tcpSocket:
