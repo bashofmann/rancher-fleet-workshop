@@ -26,6 +26,8 @@ stringData:
       basic_auth:
         username: user
         password: password
+      tls_config:
+        insecure_skip_verify: true
       static_configs:
         - targets: 
           - "prometheus.central.3.72.51.158.sslip.io:443"
