@@ -33,9 +33,9 @@ spec:
       cpu: 3500m
       memory: 5000Mi
     requests:
-      cpu: 2500m
-      memory: 2500Mi
-  retention: 10d
+      cpu: 750m
+      memory: 750Mi
+  retention: 4h
   routePrefix: /
   ruleNamespaceSelector: {}
   ruleSelector:

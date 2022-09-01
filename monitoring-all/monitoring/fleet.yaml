@@ -9,6 +9,15 @@ helm:
     k3sServer:
       enabled: true
     prometheus:
+      prometheusSpec:
+        resources:
+          limits:
+            cpu: 3500m
+            memory: 5000Mi
+          requests:
+            cpu: 250m
+            memory: 250Mi
+        retention: 4h
       ingress:
         enabled: true
         annotations:
