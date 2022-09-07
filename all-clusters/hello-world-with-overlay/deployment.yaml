@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world-overlay
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hello-world-overlay
+  template:
+    metadata:
+      labels:
+        app: hello-world-overlay
+    spec:
+      containers:
+        - name: hello-world-overlay
+          image: bashofmann/rancher-demo:1.0.0
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 8080
+            name: web
+            protocol: TCP
+          env:
+            - name: COW_COLOR
+              value: purple
+          readinessProbe:
+            httpGet:
+              port: web
+              path: /
